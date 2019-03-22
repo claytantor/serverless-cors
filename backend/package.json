@@ -1,15 +1,14 @@
 {
-    "name": "serverless-cors",
-    "version": "1.0.0",
-    "description": "the backend for the flashlex app",
-    "main": "handler.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "mustache": "^3.0.1"
-    }
+  "name": "serverless-cors",
+  "version": "1.0.0",
+  "description": "the backend for the flashlex app",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^3.0.1"
   }
-  
+}

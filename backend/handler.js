@@ -2,7 +2,7 @@ exports.getInfo = (event, context, callback) => {
     console.log('processing event: %j', event);
 
     let result = {
-        message: "hello world."
+        message: "cors is working."
     }
 
     callback(null, {
