@@ -1,0 +1,9 @@
+<h1 id="greeting">loading...</h1>
+
+<script>
+$.get("https://7jbgaw1dmi.execute-api.us-east-1.amazonaws.com/dev/info").done(function (data) {
+    console.log(data);
+    $("#greeting").html(data.message);
+});
+</script>
+

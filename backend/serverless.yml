@@ -1,0 +1,28 @@
+# serverless.yml
+service: serverless-cors
+
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs8.10
+
+functions:
+  getInfo:
+    handler: handler.getInfo
+    events:
+      - http:
+            path: /info
+            method: get
+            cors: true
+
+resources:
+    Resources:
+        GatewayResponseDefault4XX:
+            Type: 'AWS::ApiGateway::GatewayResponse'
+            Properties:
+                ResponseParameters:
+                    gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+                    gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+                ResponseType: DEFAULT_4XX
+                RestApiId:
+                    Ref: 'ApiGatewayRestApi'
